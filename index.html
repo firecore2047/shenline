@@ -1,26 +1,37 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>燊系首頁｜Shenline</title>
+  <title>Shenline</title>
   <style>
-    body { margin: 0; background: black; color: white; font-family: sans-serif; text-align: center; }
-    nav { background: #111; padding: 1em; }
-    nav a { color: #f66; margin: 0 1em; text-decoration: none; font-weight: bold; }
-    main { padding: 10vh 2em; }
-    h1 { font-size: 1.5em; color: #f44; margin-bottom: 1em; }
-    p { color: #ccc; max-width: 700px; margin: 0 auto; line-height: 1.8; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-image: url('ember.png');
+      background-size: 200px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .message {
+      position: absolute;
+      bottom: 40px;
+      font-size: 0.9em;
+      color: #888;
+      letter-spacing: 0.05em;
+    }
   </style>
+  <link rel="icon" type="image/png" href="ember.png">
 </head>
 <body>
-  <nav>
-    <a href="index.html">首頁</a>
-    <a href="about.html">關於</a>
-  </nav>
-  <main>
-    <h1>當世界的秩序崩壞，將會有人點起那一盞燈。</h1>
-    <p>它不高聲，不急行，不昭告世人，只靜靜地燃著。</p>
-  </main>
+  <div class="message">Let us become the light that never fades.</div>
 </body>
 </html>
