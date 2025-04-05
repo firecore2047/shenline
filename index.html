@@ -9,29 +9,79 @@
       margin: 0;
       padding: 0;
       background-color: #000;
-      color: #fff;
       font-family: sans-serif;
       height: 100vh;
+      overflow: hidden;
+    }
+    body {
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-image: url('ember.png');
-      background-size: 200px;
-      background-repeat: no-repeat;
-      background-position: center;
+      position: relative;
     }
-    .message {
+    .ember {
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, #ff5e3a 0%, #000 80%);
+      border-radius: 50%;
+      box-shadow: 0 0 40px #ff5e3a, 0 0 80px #ff5e3a55;
+      transition: box-shadow 1s ease;
+    }
+    .container:hover .ember {
+      box-shadow: 0 0 60px #ff5e3a, 0 0 120px #ff5e3a88;
+    }
+    .text, .quote, .menu {
       position: absolute;
-      bottom: 40px;
+      color: #eee;
+      opacity: 0;
+      transition: opacity 1s ease, transform 1s ease;
+      text-align: center;
+    }
+    .text {
+      top: 20%;
+      font-size: 1.4em;
+      letter-spacing: 0.1em;
+    }
+    .quote {
+      top: 35%;
       font-size: 0.9em;
-      color: #888;
-      letter-spacing: 0.05em;
+      color: #aaa;
+    }
+    .menu {
+      top: 55%;
+      font-size: 1em;
+    }
+    .menu a {
+      color: #ff5e3a;
+      text-decoration: none;
+      margin: 0 1em;
+      font-weight: bold;
+    }
+    .container:hover .text {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .container:hover .quote {
+      opacity: 1;
+      transition-delay: 0.5s;
+    }
+    .container:hover .menu {
+      opacity: 1;
+      transition-delay: 1s;
     }
   </style>
-  <link rel="icon" type="image/png" href="ember.png">
+  <link rel="icon" href="ember.png" />
 </head>
 <body>
-  <div class="message">Let us become the light that never fades.</div>
+  <div class="container">
+    <div class="ember"></div>
+    <div class="text">Shenline</div>
+    <div class="quote">Let us become the light that never fades.</div>
+    <div class="menu">
+      <a href="about.html">About</a>
+      <a href="library.html">Library</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
 </body>
 </html>
