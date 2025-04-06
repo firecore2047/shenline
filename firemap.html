@@ -1,134 +1,28 @@
+
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>語言星圖｜Shenline Firemap</title>
-  <style>
-<body>
-  <!-- 導入 Shenline 導覽列 -->
-  <div id="navbar-container"></div>
-  <script>
-    fetch('navbar.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('navbar-container').innerHTML = html;
-      });
-  </script>
-    .star {
-      position: absolute;
-      border-radius: 50%;
-      background: #ff5e3a;
-      box-shadow: 0 0 12px #ff5e3a88;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    }
-    .star:hover {
-      transform: scale(1.2);
-    }
-    .label {
-      position: absolute;
-      color: #ccc;
-      font-size: 0.9em;
-      text-align: center;
-      width: 150px;
-      transform: translateX(-50%);
-      pointer-events: none;
-    }
-    .popup {
-      position: fixed;
-      bottom: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #111;
-      color: #eee;
-      padding: 1em 1.5em;
-      border: 1px solid #444;
-      border-radius: 10px;
-      width: 80%;
-      max-width: 600px;
-      display: none;
-    }
-    .popup h2 {
-      color: #ff5e3a;
-    }
-    .popup a {
-      color: #ff5e3a;
-      text-decoration: none;
-    }
-  </style>
+  <title>Shenline Firemap</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-<div id="popup" class="popup">
-  <h2 id="popupTitle">標題</h2>
-  <p id="popupText">內容說明</p>
-  <p><a href="#" target="_blank" id="popupLink">相關連結</a></p>
-</div>
-
-<script>
-const firePhrases = [
-  {
-    text: "火不必燒盡一切，它只需要照亮彼此。",
-    x: 50, y: 50,
-    detail: "Shenline 主幹語，表達非毀滅式的民主光線行動精神。",
-    link: "firetree.html"
-  },
-  {
-    text: "你不是孤單，你只是先點亮了而已。",
-    x: 20, y: 30,
-    detail: "用於安撫備援者的孤立感，強化心理連結。",
-    link: "contact.html"
-  },
-  {
-    text: "斷訊不是滅亡，是測試。",
-    x: 75, y: 25,
-    detail: "面對通訊中斷、封鎖時的語言備援信念。",
-    link: "firecycle.html"
-  },
-  {
-    text: "少數點亮整個夜晚。",
-    x: 30, y: 70,
-    detail: "反制「你只是少數」的壓抑語，轉為鼓舞。",
-    link: "#"
-  },
-  {
-    text: "語言是一種備援裝置。",
-    x: 70, y: 80,
-    detail: "整個語系模組的基礎觀點。",
-    link: "firecore.html"
-  }
-];
-
-const body = document.body;
-const popup = document.getElementById("popup");
-const popupTitle = document.getElementById("popupTitle");
-const popupText = document.getElementById("popupText");
-const popupLink = document.getElementById("popupLink");
-
-firePhrases.forEach((item, index) => {
-  const star = document.createElement("div");
-  star.className = "star";
-  star.style.width = "16px";
-  star.style.height = "16px";
-  star.style.left = item.x + "vw";
-  star.style.top = item.y + "vh";
-  star.onclick = () => {
-    popupTitle.innerText = item.text;
-    popupText.innerText = item.detail;
-    popupLink.href = item.link;
-    popupLink.innerText = "前往 → " + item.link;
-    popup.style.display = "block";
-  };
-  const label = document.createElement("div");
-  label.className = "label";
-  label.innerText = item.text;
-  label.style.left = item.x + "vw";
-  label.style.top = (item.y + 4) + "vh";
-
-  body.appendChild(star);
-  body.appendChild(label);
-});
-</script>
+  <div id="navbar">
+    <a href="index.html">首頁</a>
+    <a href="about.html">關於</a>
+    <a href="contact.html">聯絡</a>
+    <a href="firemap.html">火圖</a>
+    <a href="firetree.html">語言樹</a>
+  </div>
+  <canvas id="firemap" width="800" height="600"></canvas>
+  <script>
+    const canvas = document.getElementById("firemap");
+    const ctx = canvas.getContext("2d");
+    ctx.fillStyle = "orange";
+    ctx.beginPath();
+    ctx.arc(400, 300, 50, 0, 2 * Math.PI);
+    ctx.fill();
+  </script>
 </body>
 </html>

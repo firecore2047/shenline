@@ -1,87 +1,20 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shenline</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      background-color: #000;
-      font-family: sans-serif;
-      height: 100vh;
-      overflow: hidden;
-    }
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    }
-    .ember {
-      width: 180px;
-      height: 180px;
-      background: radial-gradient(circle, #ff5e3a 0%, #000 80%);
-      border-radius: 50%;
-      box-shadow: 0 0 40px #ff5e3a, 0 0 80px #ff5e3a55;
-      transition: box-shadow 1s ease;
-    }
-    .container:hover .ember {
-      box-shadow: 0 0 60px #ff5e3a, 0 0 120px #ff5e3a88;
-    }
-    .text, .quote, .menu {
-      position: absolute;
-      color: #eee;
-      opacity: 0;
-      transition: opacity 1s ease, transform 1s ease;
-      text-align: center;
-    }
-    .text {
-      top: 20%;
-      font-size: 1.4em;
-      letter-spacing: 0.1em;
-    }
-    .quote {
-      top: 35%;
-      font-size: 0.9em;
-      color: #aaa;
-    }
-    .menu {
-      top: 55%;
-      font-size: 1em;
-    }
-    .menu a {
-      color: #ff5e3a;
-      text-decoration: none;
-      margin: 0 1em;
-      font-weight: bold;
-    }
-    .container:hover .text {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .container:hover .quote {
-      opacity: 1;
-      transition-delay: 0.5s;
-    }
-    .container:hover .menu {
-      opacity: 1;
-      transition-delay: 1s;
-    }
-  </style>
-  <link rel="icon" href="ember.png" />
+  <title>Shenline 首頁</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <div class="ember"></div>
-    <div class="text">Shenline</div>
-    <div class="quote">Let us become the light that never fades.</div>
-    <div class="menu">
-      <a href="about.html">About</a>
-      <a href="library.html">Library</a>
-      <a href="#">Contact</a>
-    </div>
+  <div id="navbar">
+    <a href="index.html">首頁</a>
+    <a href="about.html">關於</a>
+    <a href="contact.html">聯絡</a>
+    <a href="firemap.html">火圖</a>
+    <a href="firetree.html">語言樹</a>
   </div>
+  <h1>歡迎來到 Shenline</h1>
 </body>
 </html>
