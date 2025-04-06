@@ -1,6 +1,4 @@
-
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,11 +6,45 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-black text-white font-mono">
-  <!-- 簡化範例首頁，保證能正確載入 -->
-  <section class="min-h-screen flex flex-col items-center justify-center p-12 text-center">
+  <nav class="flex justify-between items-center p-4 border-b border-gray-700">
+    <div class="text-xl font-bold tracking-widest">SHENLINE</div>
+    <ul class="flex gap-4 text-sm">
+      <li><a href="#home" class="hover:underline">Home</a></li>
+      <li><a href="#about" class="hover:underline">About</a></li>
+      <li><a href="#map" class="hover:underline">Fireline Map</a></li>
+      <li><a href="#language" class="hover:underline">Language Tree</a></li>
+      <li><a href="#cycle" class="hover:underline">Cycle</a></li>
+      <li><a href="#archive" class="hover:underline">Archive</a></li>
+      <li><a href="#identity" class="hover:underline">Identity</a></li>
+      <li><a href="#contact" class="hover:underline">Contact</a></li>
+    </ul>
+  </nav>  <section id="home" class="flex flex-col items-center justify-center min-h-screen p-12 text-center">
     <img src="core-insignia.png" alt="Core Insignia" class="w-40 h-40 mb-4" />
     <h1 class="text-4xl font-bold mb-2 tracking-widest">SHENLINE</h1>
-    <p class="text-gray-400 italic">"When fire dies, language remembers."</p>
-  </section>
+    <p class="italic text-gray-400">"When fire dies, language remembers."</p>
+  </section>  <section id="about" class="p-12 border-t border-gray-700">
+    <h2 class="text-3xl font-semibold mb-6">ABOUT</h2>
+    <p class="text-gray-300 max-w-2xl">Shenline is not a movement, nor a doctrine. It is a structure born of fracture—a system designed to retain coherence where states, signals, and stories fail.</p>
+  </section>  <section id="map" class="p-12 border-t border-gray-700">
+    <h2 class="text-3xl font-semibold mb-6">FIRELINE MAP</h2>
+    <img src="fireline-base-map.png" alt="Fireline Map" class="w-full rounded" />
+  </section>  <section id="language" class="p-12 border-t border-gray-700">
+    <h2 class="text-3xl font-semibold mb-6">LANGUAGE TREE</h2>
+    <img src="language-tree-core.png" alt="Language Tree" class="w-full max-w-xl mx-auto" />
+  </section>  <section id="cycle" class="p-12 border-t border-gray-700">
+    <h2 class="text-3xl font-semibold mb-6">CYCLE OF FIRE</h2>
+    <img src="cycle-of-fire-wheel.png" alt="Cycle of Fire" class="w-full max-w-lg mx-auto" />
+  </section>  <section id="archive" class="p-12 border-t border-gray-700">
+    <h2 class="text-3xl font-semibold mb-6">ARCHIVE</h2>
+    <p class="text-gray-400">Resources are tagged by language resonance. All files mirrored to preserve continuity.</p>
+  </section>  <section id="identity" class="p-12 border-t border-gray-700">
+    <h2 class="text-3xl font-semibold mb-6">IDENTITY</h2>
+    <p class="text-gray-400">Choose your alignment. Shenline recognizes roles through language, not labels.</p>
+  </section>  <section id="contact" class="p-12 border-t border-gray-700">
+    <h2 class="text-3xl font-semibold mb-4">CONTACT</h2>
+    <p class="text-gray-300">Reach the reserve core at: <span class="underline">firecore@proton.me</span></p>
+  </section>  <footer class="text-center py-6 text-sm text-gray-600 border-t border-gray-700">
+    Join the invisible structure. Shenline © 2047
+  </footer>
 </body>
 </html>
