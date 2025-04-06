@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>語言之樹｜Shenline Firetree</title>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: #eee;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 2em;
+      text-align: center;
+    }
+    h1 {
+      color: #ff5e3a;
+      font-size: 1.6em;
+    }
+    .node {
+      margin-top: 2em;
+      cursor: pointer;
+      transition: color 0.4s;
+    }
+    .node:hover {
+      color: #ff5e3a;
+    }
+    .branch {
+      display: none;
+      margin-top: 1em;
+      text-align: left;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .branch h2 {
+      color: #faa;
+      font-size: 1.1em;
+      border-bottom: 1px solid #333;
+      margin-top: 1.5em;
+    }
+    .branch p, .branch li {
+      color: #ccc;
+      font-size: 0.95em;
+      line-height: 1.6;
+    }
+    .branch a {
+      color: #ff5e3a;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Shenline 語言之樹</h1>
+
+  <div class="node" onclick="toggleBranch()">「火不必燒盡一切，它只需要照亮彼此。」</div>
+
+  <div class="branch" id="branch">
+    <h2>語意說明</h2>
+    <p>這句話的核心是：我們不是為了毀滅體制，而是為了保存彼此的火光。燊系不是焚燒一切的烈火，而是彼此點亮的微光。</p>
+
+    <h2>延伸語句</h2>
+    <ul>
+      <li>你不是孤單，你只是先點亮了而已。</li>
+      <li>少數點亮整個夜晚。</li>
+    </ul>
+
+    <h2>應用場景</h2>
+    <ul>
+      <li>在對話中面對「不要搞事」的抑制時，用這句話作為反應</li>
+      <li>面對運動或備援時的內部懷疑，作為團體信念之光</li>
+    </ul>
+
+    <h2>行動連結</h2>
+    <ul>
+      <li><a href="contact.html" target="_blank">我要回應這句話 → 前往回應通道</a></li>
+      <li><a href="firecycle.html" target="_blank">觀看更多語句 → 前往語句循環器</a></li>
+    </ul>
+  </div>
+
+  <script>
+    function toggleBranch() {
+      const branch = document.getElementById('branch');
+      branch.style.display = branch.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>
