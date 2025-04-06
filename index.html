@@ -1,60 +1,94 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shenline｜未熄的火</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shenline｜點亮語林</title>
   <style>
-    body {
+    html, body {
       margin: 0;
-      background-color: #000;
+      padding: 0;
+      background: #000;
       color: #fff;
       font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+    }
+    .center-text {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       text-align: center;
-      padding: 3em 1em;
+      animation: fadein 2s ease-out;
     }
-    h1 {
-      font-size: 2em;
+    .center-text h1 {
       color: #ff5e3a;
-      margin-bottom: 0.5em;
+      font-size: 2.4em;
+      margin-bottom: 0.2em;
     }
-    p {
-      max-width: 600px;
-      margin: 0 auto 2em;
-      line-height: 1.8;
+    .center-text p {
       color: #ccc;
+      font-size: 1em;
     }
-    .nav {
-      margin-top: 3em;
+
+    .dot {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #ff5e3a;
+      border-radius: 50%;
+      opacity: 0.7;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
-    .nav a {
-      display: inline-block;
-      margin: 0.5em 1em;
-      color: #ff5e3a;
-      text-decoration: none;
-      font-weight: bold;
-      border: 1px solid #ff5e3a;
-      padding: 0.5em 1em;
-      border-radius: 6px;
-      transition: all 0.3s ease;
+    .dot:hover {
+      transform: scale(1.5);
+      box-shadow: 0 0 20px #ff5e3a;
+      cursor: pointer;
     }
-    .nav a:hover {
-      background-color: #ff5e3a;
-      color: #000;
+    .label {
+      position: absolute;
+      color: #fff;
+      font-size: 0.8em;
+      text-align: center;
+      width: 100px;
+      transform: translateX(-50%);
+      margin-top: 26px;
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+    }
+    .dot:hover + .label {
+      opacity: 1;
+    }
+
+    @keyframes fadein {
+      from { opacity: 0; transform: translate(-50%, -60%); }
+      to { opacity: 1; transform: translate(-50%, -50%); }
+    }
+    footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 0.7em;
+      color: #555;
     }
   </style>
 </head>
 <body>
-  <h1>Shenline｜未熄的火</h1>
-  <p>我們不是新的政黨，也不是舊的答案。<br>我們是一群點火者，走在黑暗裡，也準備點亮未來。</p>
-
-  <div class="nav">
-    <a href="about.html">關於我們</a>
-    <a href="firemap.html">火線地圖</a>
-    <a href="firetree.html">語言樹</a>
-    <a href="firecycle.html">火種週期</a>
-    <a href="library.html">資源庫</a>
-    <a href="contact.html">回聲通道</a>
+  <div class="center-text">
+    <h1>Shenline｜未熄的火</h1>
+    <p>每一個語點，都是一個召喚。</p>
   </div>
+
+  <!-- 語點：頁面連結 -->
+  <a href="about.html" class="dot" style="top:20%; left:20%;"></a><div class="label" style="top:20%; left:20%;">關於</div>
+  <a href="firemap.html" class="dot" style="top:25%; left:75%;"></a><div class="label" style="top:25%; left:75%;">火線地圖</div>
+  <a href="firetree.html" class="dot" style="top:60%; left:15%;"></a><div class="label" style="top:60%; left:15%;">語言樹</div>
+  <a href="firecycle.html" class="dot" style="top:65%; left:50%;"></a><div class="label" style="top:65%; left:50%;">火種週期</div>
+  <a href="library.html" class="dot" style="top:65%; left:80%;"></a><div class="label" style="top:65%; left:80%;">資源庫</div>
+  <a href="contact.html" class="dot" style="top:85%; left:50%;"></a><div class="label" style="top:85%; left:50%;">回聲通道</div>
+
+  <footer>© Shenline 2025. 火不熄，語不斷。</footer>
 </body>
 </html>
