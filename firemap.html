@@ -5,13 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>語言星圖｜Shenline Firemap</title>
   <style>
-    body {
-      margin: 0;
-      background-color: #000;
-      color: #eee;
-      font-family: 'Segoe UI', sans-serif;
-      overflow: hidden;
-    }
+<body>
+  <!-- 導入 Shenline 導覽列 -->
+  <div id="navbar-container"></div>
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar-container').innerHTML = html;
+      });
+  </script>
     .star {
       position: absolute;
       border-radius: 50%;
